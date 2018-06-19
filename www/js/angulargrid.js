@@ -78,7 +78,7 @@
     'transition: none !important;' +
     '} ' +
     '.angular-grid{position : relative;} ' +
-    '.angular-grid > *{opacity : 0} ' +
+    '.angular-grid > *{opacity : 1} ' +
     '.angular-grid > .angular-grid-item{opacity : 1}' + '</style>');
 
   return angular.module('angularGrid', [])
