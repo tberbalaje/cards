@@ -1,17 +1,139 @@
 <ion-view view-title="Dashboard">
+  <ion-header-bar class="bar-subheader item-input-inset" name="cm-search-bar">
+    <label  class="item item-input bar-search">
+                 <i class="icon ion-search placeholder-icon"></i>
+                 <input type="text" ng-model="input.filterUser" placeholder="Search">
+               </label>
+  	<button class="button button-clear" ng-if="searchStringInternal" ng-click="clearSearchString()">
+  		<i class="icon ion-close-circled"></i>
+  	</button>
+    <ion-item class="bar-tabs">
+
+        <ion-scroll direction="x" class="wide-as-needed">
+          <a class="button inline-button">Koramangala</a>
+          <a class="button">Indiranagar</a>
+          <a class="button">Bellandoor</a>
+          <a class="button">Vijayanagar</a>
+          <a class="button">this is a button : 5</a>
+          <a class="button">this is a button : 6</a>
+          <a class="button">this is a button : 7</a>
+          <a class="button">this is a button : 8</a>
+          <a class="button">this is a button : 9</a>
+          <a class="button">this is a button : 10</a>
+          <a class="button">this is a button : 11</a>
+          <a class="button">this is a button : 12</a>
+          <a class="button">this is a button : 13</a>
+          <a class="button">this is a button : 14</a>
+          <a class="button">ಬೆಳ್ತಂಗಡಿ  </a>
+          <a class="button">ಮಡಂತ್ಯಾರು</a>
+
+
+
+        </ion-scroll>
+
+    </ion-item>
+
+  </ion-header-bar>
+
   <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      <b>Psst!</b> - Try <a href="http://view.ionic.io/">Ionic View</a> to easily share and test your app with clients and co-workers.
-    </p>
+
+
+
+
+
+
+
+
+
+<!--
+ <ul class="dynamic-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="false">
+      <li data-ng-repeat="pic in pics" class="grid">
+
+
+        <img ng-click="alert(pic)" alt="" src="{{pic.media.m}}" class="grid-img" data-actual-width="{{pic.actualWidth}}" data-actual-height="{{pic.actualHeight}}">
+        </img>
+
+        <p>{{pic.title}}<br>
+          <ion-icon class="ion-clock" data-pack="default" data-tags="time, watch, hours, minutes, seconds"> <time am-time-ago="pic.date_taken" title="{{ pic.published }}| amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}"></time> </ion-icon>
+        </p>
+        <span>section</span>
+      </li>
+    </ul>
+    <ion-spinner icon="bubbles" ng-if="isLoading" class="spinner-balanced"></ion-spinner>
+
+    <script id="image-modal.html" type="text/ng-template ">
+      <div class="popup-modal modal image-modal transparent" ng-click="closeModal()">
+
+        <ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
+          <ion-slide>
+            <img ng-src="{{imageSrc}}" class="fullscreen-image" />
+            <p class="info">{{title}}</p>
+          </ion-slide>
+        </ion-slide-box>
+
+      </div>
+    </script> -->
+
+
+<!-- WORKING -->
+
+  <div layout="column" layout-fill>
+  <div
+       class="cards-wrap"
+       angular-grid="shots"
+       grid-width="300"
+       gutter-size="12"
+       angular-grid-id="shots"
+       infinite-scroll-container="#content-scroller"
+       infinite-scroll-threshold="500">
+    <div class="grid" ng-repeat="shot in shots track by $index">
+
+      <img ng-click="alert(shot)" alt="" src="{{shot.media.m}}" class="grid-img" data-actual-width="{{shot.actualWidth}}" data-actual-height="{{shot.actualHeight}}">
+      </img>
+      <p>{{shot.title}}<br>
+        <ion-icon class="ion-clock" data-pack="default" data-tags="time, watch, hours, minutes, seconds"> <time am-time-ago="shot.date_taken" title="{{ shot.published }}| amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}"></time> </ion-icon>
+      </p>
+      <span>section</span>
+      <!-- <div class="inside">
+        <h3>{{::shot.title}}</h3>
+        <div class="description" ng-bind-html="::shot.description | unsafe"></div> -->
+      </div>
+    </div>
+    <!-- <div class="loading-more-indicator" ng-show="loadingMore">
+      <md-progress-circular md-mode="indeterminate" md-diameter="64" class="progress-swatch"></md-progress-circular>
+    </div> -->
+  </div>
+</md-content>
+</div>
+
+<ion-infinite-scroll   on-infinite="loadMoreShots()"  ></ion-infinite-scroll>
+
+<!-- WORKING -->
+  <!-- <div layout="column" layout-fill>
+  <div
+       class="cards-wrap"
+       angular-grid="shots"
+       grid-width="300"
+       gutter-size="12"
+       angular-grid-id="shots"
+       infinite-scroll-container="#content-scroller"
+       infinite-scroll-threshold="500">
+    <div class="card" ng-repeat="shot in shots">
+      <div class="img" style="background-image: url({{::shot.images.normal}});"></div>
+      <div class="inside">
+        <h3>{{shot.title}}</h3>
+        <div class="description" ng-bind-html="::shot.description | unsafe"></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<ion-infinite-scroll   on-infinite="loadMoreShots()"  ></ion-infinite-scroll> -->
+
+
+
+
   </ion-content>
 </ion-view>
