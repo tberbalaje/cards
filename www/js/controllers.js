@@ -457,6 +457,32 @@ angular.module('starter.controllers', ['angularGrid', 'ionic', 'angularMoment', 
       angularGridInstance.gallery.refresh();
     }
 
+    $scope.categories =
+      [
+      {category: " Koramangala"},
+      {category: " Indiranagar"},
+      {category: " Bellandoor"},
+      {category: " Vijayanagar"},
+      {category: " Mejestic"},
+      {category: " Nelamangala"},
+      {category: " Marathalli"},
+      {category: " Whitefield"},
+      {category: " Madiwala"},
+      {category: " ಬೆಳ್ತಂಗಡಿ"},
+      {category: " ಮಡಂತ್ಯಾರು"},
+      {category: " Electronic city"},
+      {category: " Chandapura"},
+      {category: " Attibele"},
+      {category: " Veerasandar"}
+
+      ]
+    ;
+
+    $scope.categorySelected = function(obj){
+        console.log("Selected location : " + obj);
+    };
+
+
 
 
     $ionicModal.fromTemplateUrl('image-modal.html', {
