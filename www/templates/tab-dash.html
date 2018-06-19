@@ -1,54 +1,89 @@
 <ion-view view-title="Dashboard">
-  <ion-header-bar class="bar-subheader item-input-inset" name="cm-search-bar">
-    <label  class="item item-input bar-search">
-                 <i class="icon ion-search placeholder-icon"></i>
-                 <input type="text" ng-model="input.filterUser" placeholder="Search">
-               </label>
-  	<button class="button button-clear" ng-if="searchStringInternal" ng-click="clearSearchString()">
-  		<i class="icon ion-close-circled"></i>
-  	</button>
-    <ion-item class="bar-tabs">
+    <ion-header-bar class="bar-subheader item-input-inset" name="cm-search-bar">
 
-        <ion-scroll direction="x" class="wide-as-needed">
-          <a class="button inline-button">Koramangala</a>
-          <a class="button">Indiranagar</a>
-          <a class="button">Bellandoor</a>
-          <a class="button">Vijayanagar</a>
-          <a class="button">this is a button : 5</a>
-          <a class="button">this is a button : 6</a>
-          <a class="button">this is a button : 7</a>
-          <a class="button">this is a button : 8</a>
-          <a class="button">this is a button : 9</a>
-          <a class="button">this is a button : 10</a>
-          <a class="button">this is a button : 11</a>
-          <a class="button">this is a button : 12</a>
-          <a class="button">this is a button : 13</a>
-          <a class="button">this is a button : 14</a>
-          <a class="button">ಬೆಳ್ತಂಗಡಿ  </a>
-          <a class="button">ಮಡಂತ್ಯಾರು</a>
+        <label class="item item-input bar-search">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="text" ng-model="input.filterUser" placeholder="Search">
+        </label>
+        <ion-item class="padding bar-tabs">
 
+            <ion-scroll direction="x" class="wide-as-needed">
 
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Koramangala
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Indiranagar
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Bellandoor
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Vijayanagar
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Mejestic
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Nelamangala
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Marathalli
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Whitefield
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">
+                        Madiwala
+                    </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">ಬೆಳ್ತಂಗಡಿ </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">ಮಡಂತ್ಯಾರು</button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">Electronic city </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">Chandapura</button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">Attibele </button>
+                </a>
+                <a>
+                    <button class="button button-outline button-positive button-style">Chandapura</button>
+                </a>
 
-        </ion-scroll>
+            </ion-scroll>
 
-    </ion-item>
+        </ion-item>
 
-  </ion-header-bar>
+    </ion-header-bar>
 
-  <ion-content class="padding">
+    <ion-content class="padding">
 
-
-
-
-
-
-
-
-
-<!--
+        <!--
  <ul class="dynamic-grid" angular-grid="pics" grid-width="300" gutter-size="10" angular-grid-id="gallery" refresh-on-img-load="false">
       <li data-ng-repeat="pic in pics" class="grid">
-
 
         <img ng-click="alert(pic)" alt="" src="{{pic.media.m}}" class="grid-img" data-actual-width="{{pic.actualWidth}}" data-actual-height="{{pic.actualHeight}}">
         </img>
@@ -59,57 +94,50 @@
         <span>section</span>
       </li>
     </ul>
-    <ion-spinner icon="bubbles" ng-if="isLoading" class="spinner-balanced"></ion-spinner>
+    <ion-spinner icon="bubbles" ng-if="isLoading" class="spinner-balanced"></ion-spinner> -->
 
-    <script id="image-modal.html" type="text/ng-template ">
-      <div class="popup-modal modal image-modal transparent" ng-click="closeModal()">
+        <script id="image-modal.html" type="text/ng-template ">
+            <div class="popup-modal modal image-modal transparent" ng-click="closeModal()">
 
-        <ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
-          <ion-slide>
-            <img ng-src="{{imageSrc}}" class="fullscreen-image" />
-            <p class="info">{{title}}</p>
-          </ion-slide>
-        </ion-slide-box>
+                <ion-slide-box on-slide-changed="slideChanged(index)" show-pager="false">
+                    <ion-slide>
+                        <img ng-src="{{imageSrc}}" class="fullscreen-image" />
+                        <p class="info">{{title}}</p>
+                    </ion-slide>
+                </ion-slide-box>
 
-      </div>
-    </script> -->
+            </div>
+        </script>
 
+        <div layout="column" layout-fill>
+            <div class="cards-wrap" angular-grid="shots" grid-width="300" gutter-size="12" angular-grid-id="shots" infinite-scroll-container="#content-scroller" infinite-scroll-threshold="500">
+                <div class="grid" ng-repeat="shot in shots track by $index">
 
-<!-- WORKING -->
-
-  <div layout="column" layout-fill>
-  <div
-       class="cards-wrap"
-       angular-grid="shots"
-       grid-width="300"
-       gutter-size="12"
-       angular-grid-id="shots"
-       infinite-scroll-container="#content-scroller"
-       infinite-scroll-threshold="500">
-    <div class="grid" ng-repeat="shot in shots track by $index">
-
-      <img ng-click="alert(shot)" alt="" src="{{shot.media.m}}" class="grid-img" data-actual-width="{{shot.actualWidth}}" data-actual-height="{{shot.actualHeight}}">
-      </img>
-      <p>{{shot.title}}<br>
-        <ion-icon class="ion-clock" data-pack="default" data-tags="time, watch, hours, minutes, seconds"> <time am-time-ago="shot.date_taken" title="{{ shot.published }}| amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}"></time> </ion-icon>
-      </p>
-      <span>section</span>
-      <!-- <div class="inside">
+                    <img ng-click="alert(shot)" alt="" src="{{shot.media.m}}" class="grid-img" data-actual-width="{{shot.actualWidth}}" data-actual-height="{{shot.actualHeight}}">
+                    </img>
+                    <p>{{shot.title}}
+                        <br>
+                        <ion-icon class="ion-clock" data-pack="default" data-tags="time, watch, hours, minutes, seconds">
+                            <time am-time-ago="shot.date_taken" title="{{ shot.published }}| amDateFormat: 'dddd, MMMM Do YYYY, h:mm a' }}"></time>
+                        </ion-icon>
+                    </p>
+                    <span>{{shot.author_id}}</span>
+                    <!-- <div class="inside">
         <h3>{{::shot.title}}</h3>
         <div class="description" ng-bind-html="::shot.description | unsafe"></div> -->
-      </div>
-    </div>
-    <!-- <div class="loading-more-indicator" ng-show="loadingMore">
+                </div>
+            </div>
+            <!-- <div class="loading-more-indicator" ng-show="loadingMore">
       <md-progress-circular md-mode="indeterminate" md-diameter="64" class="progress-swatch"></md-progress-circular>
-    </div> -->
+    </div>
   </div>
-</md-content>
-</div>
+</md-content>-->
+        </div>
 
-<ion-infinite-scroll   on-infinite="loadMoreShots()"  ></ion-infinite-scroll>
+        <ion-infinite-scroll on-infinite="loadMoreShots()"></ion-infinite-scroll>
 
-<!-- WORKING -->
-  <!-- <div layout="column" layout-fill>
+        <!-- WORKING -->
+        <!-- <div layout="column" layout-fill>
   <div
        class="cards-wrap"
        angular-grid="shots"
@@ -132,8 +160,5 @@
 
 <ion-infinite-scroll   on-infinite="loadMoreShots()"  ></ion-infinite-scroll> -->
 
-
-
-
-  </ion-content>
+    </ion-content>
 </ion-view>

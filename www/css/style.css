@@ -2,7 +2,10 @@
 .wide-as-needed {
   overflow: scroll;
   white-space: nowrap;
+
+   overflow-x: hidden;
 }
+
 .scroll {
   min-width: 100%;
 }
@@ -44,7 +47,7 @@ padding: 20px 20px 10px 20px
   position: absolute;
   top:20px;
   right:0;
-  background: #fff;
+  background: #eee;
   padding: 5px;
   border-radius: 2px 0 0 2px;
 }
@@ -75,7 +78,7 @@ padding: 20px 20px 10px 20px
 .grid-img {
   width: 100%;
   vertical-align: middle;
-  background-color: #fff;
+  background-color: #eee;
   opacity: 0;
   visibility: hidden;
 }
@@ -440,9 +443,9 @@ md-content {
 }
 
 .grid {
-    border: 1px solid #cccccc;
+
     list-style: none;
-    background: #ffffff;
+ 
     box-sizing: border-box;
     -moz-box-sizing : border-box;
     -webkit-transition: all 0.6s ease-out;

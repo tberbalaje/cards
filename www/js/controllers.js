@@ -459,51 +459,51 @@ angular.module('starter.controllers', ['angularGrid', 'ionic', 'angularMoment', 
 
 
 
-    // $ionicModal.fromTemplateUrl('image-modal.html', {
-    //   scope: $scope,
-    //   animation: 'slide-in-up'
-    // }).then(function(modal) {
-    //   $scope.modal = modal;
-    // });
-    //
-    // $scope.openModal = function() {
-    //   $scope.modal.show();
-    // };
-    //
-    // $scope.closeModal = function() {
-    //   $scope.modal.hide();
-    // };
-    //
-    // //Cleanup the modal when we're done with it!
-    // $scope.$on('$destroy', function() {
-    //   $scope.modal.remove();
-    // });
-    // // Execute action on hide modal
-    // $scope.$on('modal.hide', function() {
-    //   // Execute action
-    // });
-    // // Execute action on remove modal
-    // $scope.$on('modal.removed', function() {
-    //   // Execute action
-    // });
-    // $scope.$on('modal.shown', function() {
-    //   console.log('Modal is shown!');
-    // });
-    //
-    // $scope.imageSrc = 'https://ionicframework.com/img/ionic-logo-blog.png';
-    //
-    // $scope.alert = function(obj) {
-    //   console.log(obj.media.m);
-    //   $scope.imageSrc = obj.media.m;
-    //   $scope.title = obj.title;
-    //   $scope.openModal();
-    // }
+    $ionicModal.fromTemplateUrl('image-modal.html', {
+      scope: $scope,
+      animation: 'slide-in-up'
+    }).then(function(modal) {
+      $scope.modal = modal;
+    });
+
+    $scope.openModal = function() {
+      $scope.modal.show();
+    };
+
+    $scope.closeModal = function() {
+      $scope.modal.hide();
+    };
+
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+      $scope.modal.remove();
+    });
+    // Execute action on hide modal
+    $scope.$on('modal.hide', function() {
+      // Execute action
+    });
+    // Execute action on remove modal
+    $scope.$on('modal.removed', function() {
+      // Execute action
+    });
+    $scope.$on('modal.shown', function() {
+      console.log('Modal is shown!');
+    });
+
+    $scope.imageSrc = 'https://ionicframework.com/img/ionic-logo-blog.png';
+
+    $scope.alert = function(obj) {
+      console.log(obj.media.m);
+      $scope.imageSrc = obj.media.m;
+      $scope.title = obj.title;
+      $scope.openModal();
+    }
 
     $scope.showToast = function() {
       <!-- ionicToast.show(message, position, stick, time); -->
-      ionicToast.show('This is a toast at the top.', 'bottom', true, 500);
+      ionicToast.show('This is area for advertisement', 'bottom', true, 500);
     };
-    //$scope.showToast();
+    $scope.showToast();
 
 
 
